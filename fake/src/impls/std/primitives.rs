@@ -119,5 +119,5 @@ integer_impl!(i64);
 integer_impl!(i128);
 integer_impl!(isize);
 
-float_impl!(f32);
-float_impl!(f64);
+// float_impl!(f32);
+// float_impl!(f64);

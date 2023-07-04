@@ -40,16 +40,16 @@ impl Dummy<Faker> for Value {
     }
 }
 
-impl Dummy<Faker> for Number {
-    fn dummy_with_rng<R: rand::Rng + ?Sized>(config: &Faker, rng: &mut R) -> Self {
-        // Alternate between generating floats and integers
-        if Faker.fake_with_rng::<bool, _>(rng) {
-            Number::from_f64(config.fake_with_rng::<f64, _>(rng)).unwrap()
-        } else {
-            Number::from_f64(config.fake_with_rng::<i32, _>(rng).into()).unwrap()
-        }
-    }
-}
+// impl Dummy<Faker> for Number {
+//     fn dummy_with_rng<R: rand::Rng + ?Sized>(config: &Faker, rng: &mut R) -> Self {
+//         // Alternate between generating floats and integers
+//         if Faker.fake_with_rng::<bool, _>(rng) {
+//             Number::from_f64(config.fake_with_rng::<f64, _>(rng)).unwrap()
+//         } else {
+//             Number::from_f64(config.fake_with_rng::<i32, _>(rng).into()).unwrap()
+//         }
+//     }
+// }
 
 impl Dummy<Faker> for Map<String, Value> {
     fn dummy_with_rng<R: rand::Rng + ?Sized>(config: &Faker, rng: &mut R) -> Self {

@@ -16,9 +16,9 @@ fn main() {
     println!("{:?}", f);
 
     // using `Faker` to generate default fake value of given type
-    let tuple = Faker.fake::<(u8, u32, f32)>();
-    println!("tuple {:?}", tuple);
-    println!("String {:?}", Faker.fake::<String>());
+    // let tuple = Faker.fake::<(u8, u32, f32)>();
+    // println!("tuple {:?}", tuple);
+    // println!("String {:?}", Faker.fake::<String>());
 
     // types U can used to generate fake value T, if `T: Dummy<U>`
     println!("String {:?}", (8..20).fake::<String>());

@@ -204,47 +204,47 @@ impl<L: Data + Copy> Dummy<BuildingNumber<L>> for String {
     }
 }
 
-impl<L: Data> Dummy<Latitude<L>> for f64 {
-    #[inline]
-    fn dummy_with_rng<R: Rng + ?Sized>(_: &Latitude<L>, rng: &mut R) -> Self {
-        Faker.fake_with_rng::<f64, _>(rng) * 180_f64 - 90_f64
-    }
-}
+// impl<L: Data> Dummy<Latitude<L>> for f64 {
+//     #[inline]
+//     fn dummy_with_rng<R: Rng + ?Sized>(_: &Latitude<L>, rng: &mut R) -> Self {
+//         Faker.fake_with_rng::<f64, _>(rng) * 180_f64 - 90_f64
+//     }
+// }
 
-impl<L: Data> Dummy<Latitude<L>> for f32 {
-    #[inline]
-    fn dummy_with_rng<R: Rng + ?Sized>(_: &Latitude<L>, rng: &mut R) -> Self {
-        Faker.fake_with_rng::<f32, _>(rng) * 360_f32 - 90_f32
-    }
-}
+// impl<L: Data> Dummy<Latitude<L>> for f32 {
+//     #[inline]
+//     fn dummy_with_rng<R: Rng + ?Sized>(_: &Latitude<L>, rng: &mut R) -> Self {
+//         Faker.fake_with_rng::<f32, _>(rng) * 360_f32 - 90_f32
+//     }
+// }
 
-impl<L: Data> Dummy<Latitude<L>> for String {
-    #[inline]
-    fn dummy_with_rng<R: Rng + ?Sized>(c: &Latitude<L>, rng: &mut R) -> Self {
-        c.fake_with_rng::<f64, _>(rng).to_string()
-    }
-}
+// impl<L: Data> Dummy<Latitude<L>> for String {
+//     #[inline]
+//     fn dummy_with_rng<R: Rng + ?Sized>(c: &Latitude<L>, rng: &mut R) -> Self {
+//         c.fake_with_rng::<f64, _>(rng).to_string()
+//     }
+// }
 
-impl<L: Data> Dummy<Longitude<L>> for f64 {
-    #[inline]
-    fn dummy_with_rng<R: Rng + ?Sized>(_: &Longitude<L>, rng: &mut R) -> Self {
-        Faker.fake_with_rng::<f64, _>(rng) * 360_f64 - 90_f64
-    }
-}
+// impl<L: Data> Dummy<Longitude<L>> for f64 {
+//     #[inline]
+//     fn dummy_with_rng<R: Rng + ?Sized>(_: &Longitude<L>, rng: &mut R) -> Self {
+//         Faker.fake_with_rng::<f64, _>(rng) * 360_f64 - 90_f64
+//     }
+// }
 
-impl<L: Data> Dummy<Longitude<L>> for f32 {
-    #[inline]
-    fn dummy_with_rng<R: Rng + ?Sized>(_: &Longitude<L>, rng: &mut R) -> Self {
-        Faker.fake_with_rng::<f32, _>(rng) * 360_f32 - 90_f32
-    }
-}
+// impl<L: Data> Dummy<Longitude<L>> for f32 {
+//     #[inline]
+//     fn dummy_with_rng<R: Rng + ?Sized>(_: &Longitude<L>, rng: &mut R) -> Self {
+//         Faker.fake_with_rng::<f32, _>(rng) * 360_f32 - 90_f32
+//     }
+// }
 
-impl<L: Data> Dummy<Longitude<L>> for String {
-    #[inline]
-    fn dummy_with_rng<R: Rng + ?Sized>(c: &Longitude<L>, rng: &mut R) -> Self {
-        c.fake_with_rng::<f32, _>(rng).to_string()
-    }
-}
+// impl<L: Data> Dummy<Longitude<L>> for String {
+//     #[inline]
+//     fn dummy_with_rng<R: Rng + ?Sized>(c: &Longitude<L>, rng: &mut R) -> Self {
+//         c.fake_with_rng::<f32, _>(rng).to_string()
+//     }
+// }
 
 impl<L: Data> Dummy<Geohash<L>> for String {
     #[inline]

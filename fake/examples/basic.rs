@@ -32,10 +32,10 @@ fn main() {
     }
 
     // tuple
-    let tuple = Faker.fake::<(u8, u32, f32)>();
-    println!("tuple {:?}", tuple);
-    let tuple: (u8, u32, f32) = (1..10, Faker, 2.5..5.5).fake();
-    println!("tuple {:?}", tuple);
+    // let tuple = Faker.fake::<(u8, u32, f32)>();
+    // println!("tuple {:?}", tuple);
+    // let tuple: (u8, u32, f32) = (1..10, Faker, 2.5..5.5).fake();
+    // println!("tuple {:?}", tuple);
 
     // array
     let array: [u8; 0] = Faker.fake();

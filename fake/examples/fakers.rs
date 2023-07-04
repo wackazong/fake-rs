@@ -123,17 +123,17 @@ fn address_faker() {
     let val: String = TimeZone(EN).fake();
     println!("{:?}", val);
 
-    let val: f32 = Latitude(EN).fake();
-    println!("{:?}", val);
+    // let val: f32 = Latitude(EN).fake();
+    // println!("{:?}", val);
 
-    let val: f64 = Latitude(EN).fake();
-    println!("{:?}", val);
+    // // let val: f64 = Latitude(EN).fake();
+    // println!("{:?}", val);
 
-    let val: f32 = Longitude(EN).fake();
-    println!("{:?}", val);
+    // // let val: f32 = Longitude(EN).fake();
+    // println!("{:?}", val);
 
-    let val: f64 = Longitude(EN).fake();
-    println!("{:?}", val);
+    // // let val: f64 = Longitude(EN).fake();
+    // println!("{:?}", val);
 
     let val: String = Geohash(EN, 11).fake();
     println!("{:?}", val);
